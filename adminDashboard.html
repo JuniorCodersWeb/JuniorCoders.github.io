@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Administrator Dashboard</title>
+    <link rel="stylesheet" href="projectStyleSheet.css">
+
+    <style>
+        html {
+            font-family: Playfair Display, Merriweather;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 100px 200px;
+        }
+
+
+        ul {
+            line-height: 1.75vw;
+        }
+
+        ul, h2,h3, h4 {
+            color: var(--clr-text);
+        }
+
+        section {
+            padding: 100px 200px;
+        }
+
+        .admin-page {
+            padding-top: 2vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .admin-title {
+            font-size: 1.75vw;
+            padding-bottom: 1vw;
+        }
+
+        .students-names ul {
+            font-size: 1.25vw;
+        }
+
+        .course-title {
+            padding-top: 1vw;
+            padding-bottom: 0.4vw;
+            font-size: 1.25vw;
+        }
+
+        .names,
+        .kids-in-course,
+        ul.tutor-courses {
+            margin-left: 0.5vw;
+        }
+
+
+
+        .tutor-name {
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--clr-text);
+            padding-top: 1vw;
+            padding-bottom: 0.4vw;
+            font-size: 1.25vw;
+        }
+
+
+        .registered-kids,
+        .courses-tutors,
+        .tutor {
+            background: var(--clr-card-bg);
+            box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            min-height: 14em;
+            width: 19em;
+            overflow: hidden;
+            transition: 0.7s;
+        }
+
+        #currentWeekDate {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--clr-text);
+            margin-bottom: 20px;
+            padding-top: 2%;
+        }
+
+        .more-btn {
+            color: var(--clr-text);
+            background-color: var(--clr-heading);
+            border-radius: 10px;
+            transition: 0.2s;
+            padding: 0.2em 0.6em;
+            border: none;
+
+        }
+        .more-btn:hover{
+            background-color: #3c3158;
+            transform: scale(1.05, 1.05);
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <img src="images/WebProjectLogo.png" alt="logo image" width=150 height=150>
+        <a href="home.html" accesskey="h" class="logo">Junior Coders</a>
+        <nav class="navigation">
+            <a href="parentDashboard.html" class="nav-link" accesskey="p">Parents Dashboard</a>
+            <a href="adminDashboard.html" class="nav-link" accesskey="a">Administrator Dashboard</a>
+            <a href="coursePage.html" class="nav-link" accesskey="c">Current Courses</a>
+            <a href="tutors.html" class="nav-link" accesskey="t">Tutors</a>
+        </nav>
+
+    </header>
+
+
+    <hr>
+    <ul class="breadcrumb">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="adminDashboard.html">Administrator Dashboard</a></li>
+    </ul>
+
+        <!-- theme -->
+        <form class="color-picker"
+        action="" style="display: none;">
+            <fieldset>
+                <legend class="visually-hidden">Appearance</legend>
+    
+                <label for="light"
+                class="visually-hidden">Light Mode</label>
+                <input type="radio" id="light"
+                name="theme" checked>
+    
+                <label for="dark"
+                class="visually-hidden">Dark Mode</label>
+                <input type="radio" id="dark"
+                name="theme">
+    
+            </fieldset>
+        </form>
+    
+
+    <p id="currentWeekDate"></p>
+
+    <section class="admin-page">
+
+        <div class="registered-kids">
+            <h2 class="admin-title">Registered students</h2>
+            <div class="students-names">
+                <ul>
+                    <li>Roynah Saad</li>
+                    <li>Hlhl Alshehri</li>
+                    <li>Razan Abdullah</li>
+                    <li>Dana Alomar</li>
+                    <li>Waleed Sultan</li>
+                    <li>Abdulaziz Fahad</li>
+                    <li>Bashair Alsadhan</li>
+                    <li>Rama Alshebal</li>
+                    <li>shdn Alsheddi</li>
+                    <li>Deema Alamer</li>
+                    <li>Dalal Abdulaziz</li>
+                    <li>Shaden Albader</li>
+                    <li>Sarah Ahmad</li>
+                    <li>Lama Ali</li>
+                    <li>Abdullah Mohammad</li>
+                    <li>Jory Alsulaimi</li>
+                    <li>Jood Alhussain</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="courses-tutors">
+            <h2 class="admin-title">Courses</h2>
+
+
+            <div class="python">
+                <h3 class="course-title">Python Basics | Gada Alnafisah</h3>
+                <h4 class="kids-in-course">Registered students:</h4>
+                <ul class="names">
+                    <li>Dana Alomar</li>
+                    <li>Hlhl Alshehri</li>
+                    <li>Shdn Alsheddi</li>
+                    <li>Sarah Ahmad</li>
+                    <li>Razan Abdullah</li>
+                <span id="morePython" style="display: none;">
+                    <li>Jory Alsulaimi</li>
+                    <li>Jood Alhussain</li>
+                </span>
+            </ul>
+
+            <button onclick="toggleVisibility('morePython', 'btnPython')" class="more-btn" id="btnPython">Read more</button>
+        </div>
+
+
+            <div class="ML">
+                <h3 class="course-title">ML for kids | Ayman Alrashed</h3>
+                <h4 class="kids-in-course">Registered students:</h4>
+                <ul class="names">
+                    <li>Roynah Saad</li>
+                    <li>Bashair Alsadhan</li>
+                    <li>Rama Alshebal</li>
+                </ul>
+            </div>
+            <div class="arduino">
+                <h3 class="course-title">Arduino 101 | Abdullah Alswaha</h3>
+                <h4 class="kids-in-course">Registered students:</h4>
+                <ul class="names">
+                    <li>Deema Alamer</li>
+                    <li>Dalal Abdulaziz</li>
+                    <li>Shaden Albader</li>
+                    <li>Amal Abdullah</li>
+                    <li>Lama Almuaili</li>
+                    <span id="moreArduino" style="display: none;">
+                        <li>Siham Almushawah</li>
+                    </span>
+                </ul>
+                <button onclick="toggleVisibility('moreArduino', 'btnArduino')" class="more-btn" id="btnArduino">Read more</button>
+            </div>
+            <div class="robotics">
+                <h3 class="course-title">Robotics for kids | Ayman Alrashed</h3>
+                <h4 class="kids-in-course">Registered students:</h4>
+                <ul class="names">
+                    <li>Waleed Sultan</li>
+                    <li>Abdulaziz Fahad</li>
+                    <li>Reem Musaad</li>
+                    <li>Saad Alsayyari</li>
+                    <li>Shahad Alzaid</li>
+                    <span id="moreRobotics" style="display: none;">
+                        <li>Nourah Alsayyari</li>
+                        <li>Sara Fahad</li>
+                    </span>
+                </ul>
+                <button onclick="toggleVisibility('moreRobotics', 'btnRobotics')" class="more-btn" id="btnRobotics">Read more</button>
+
+                </ul>
+            </div>
+            <div class="scratch">
+                <h3 class="course-title">Scratch | Gada Alnafisah</h3>
+                <h4 class="kids-in-course">Registered students:</h4>
+                <ul class="names">
+                    <li>Abdulaziz Fahad</li>
+                    <li>Razan Abdullah</li>
+            </div>
+            <div class="unity">
+                <h3 class="course-title">Unity Basics | Abdullah Alswaha</h3>
+                <h4 class="kids-in-course">Registered students:</h4>
+                <ul class="names">
+                    <li>Waleed Sultan</li>
+                    <li>Lama Ali</li>
+                    <li>Abdullah Mohammad</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="tutor">
+            <h2 class="admin-title">Tutors</h2>
+            <ul>
+                <li>
+                    <a href="schedulePage3.html" target="blank" class="tutor-name">Gada Alnafisah</a>
+                    <ul class="tutor-courses">
+                        <li>Python Basics</li>
+                        <li>Scratch</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="SchedulePage2.html" target="blank" class="tutor-name">Ayman Alrashed</a>
+                    <ul class="tutor-courses">
+                        <li>ML for kids</li>
+                        <li>Robotics for kids</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="schedulePage4.html" target="blank" class="tutor-name">Abdullah Alswaha</a>
+                    <ul class="tutor-courses">
+                        <li>Arduino 101</li>
+                        <li>Unity Basics</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer style="margin-bottom: 0 ; margin-top:10%">
+
+        <a href="mailto:help@JuniorCoders.sa"><em>Contact Us <small>(click me)</small></em></a>
+        <p style="margin: 0.75vw; font-size: x-small;">(help@JuniorCoders.sa)</p>
+        <small class="rights">
+            © Junior Coders 2023. All rights reserved.
+        </small>
+
+    </footer>
+
+    <script>
+        // date function
+
+function getStartOfWeek() {
+    var currentDate = new Date();
+    var dayOfWeek = currentDate.getDay();
+    var daysToSubtract = dayOfWeek === 0 ? 0 : dayOfWeek;
+
+    currentDate.setDate(currentDate.getDate() - daysToSubtract);
+
+    var options = { weekday: 'long', day: 'numeric', month: 'long' };
+    var formattedDate = currentDate.toLocaleDateString('en-SA', options);
+
+    return formattedDate;
+}
+
+function updateCurrentWeekDate() {
+    var currentWeekDateElement = document.getElementById("currentWeekDate");
+    if (currentWeekDateElement) {
+        var startOfWeek = getStartOfWeek();
+        currentWeekDateElement.textContent = "Current Week: " + startOfWeek;
+    }
+}
+window.onload = function () {
+    updateCurrentWeekDate();
+};
+
+
+// more btn
+
+
+    function toggleVisibility(courseId, btnId) {
+        var moreText = document.getElementById(courseId);
+        var btnText = document.getElementById(btnId);
+
+        if (moreText.style.display === "inline") {
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }  
+
+    //theme
+
+    const colorThemes = document.querySelectorAll('[name="theme"]');
+
+const storeTheme = function (theme) {
+  localStorage.setItem("theme", theme);
+};
+
+const retrieveTheme = function () {
+  const activeTheme = localStorage.getItem("theme");
+  colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme) {
+      themeOption.checked = true;
+    }
+  });
+};
+
+colorThemes.forEach((themeOption) => {
+  themeOption.addEventListener("click", () => {
+    storeTheme(themeOption.id);
+  });
+});
+
+document.onload = retrieveTheme();
+
+    </script>
+    </body>
+</html>
