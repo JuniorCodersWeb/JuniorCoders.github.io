@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<title>Tutors Page</title>
+  <link rel="stylesheet" type="text/css" href="projectStyleSheet.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: 2.1vh;
+    }
+
+
+    .label {
+      color: var(--clr-headingText);
+      font-size: large;
+      background-size: cover;
+      text-align: center;
+      position: relative;
+ 
+    }
+
+
+    .tutor-container {
+
+      display: flex;
+      overflow-x: auto;
+      height: 0%;
+      width: 90%;
+      margin: 2em auto;
+      border-radius: 5px;
+      border-style: groove;
+      align-content: space-around;
+
+
+
+    }
+
+
+    .tutor {
+
+      background-color: var(--clr-card-bg);
+      color: var(--clr-text);
+      margin: 3%;
+      text-align: center;
+      padding: 2%;
+      border-radius: 5px;
+      box-shadow: 3px 4px 1px #eae1f5;
+      flex: 0 0 calc(33.33% - 20px);
+      max-width: 17em;
+      
+
+
+    }
+
+    .tutor img {
+      width: 20vh;
+      height: 19vh;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #5c5470;
+      opacity: 0.8;
+      flex: 0 0 calc(33.33% - 20px);
+
+    }
+
+    .tutor h2 {
+      margin-top: 10px;
+    }
+
+    .tutor p , label , h1 {
+      color: var(--clr-text);
+    }
+
+
+
+    .Area {
+      color: grey;
+      font-size: small;
+    }
+
+    .sort {
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 2rem;
+      font-weight: bold;
+      color: var(--clr-headingText);
+     
+
+    }
+    .sort select{
+
+      font-size:1em;
+    }
+
+
+
+   
+
+  </style>
+</head>
+
+<body>
+
+    
+  <header>
+    <img src="images/WebProjectLogo.png" alt="logo image" width=150 height=150>
+    <a href="home.html" accesskey="h" class="logo">Junior Coders</a>
+    <nav class="navigation">
+        <a href="parentDashboard.html" class="nav-link" accesskey="p">Parents Dashboard</a>
+        <a href="adminDashboard.html" class="nav-link" accesskey="a">Administrator Dashboard</a>
+        <a href="coursePage.html" class="nav-link" accesskey="c">Current Courses</a>
+        <a href="tutors.html" class="nav-link" accesskey="t">Tutors</a>
+    </nav>
+
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+        <!-- theme -->
+        <form class="color-picker"
+        action="" style="display: none;">
+            <fieldset>
+                <legend class="visually-hidden">Appearance</legend>
+    
+                <label for="light"
+                class="visually-hidden">Light Mode</label>
+                <input type="radio" id="light"
+                name="theme" checked>
+    
+                <label for="dark"
+                class="visually-hidden">Dark Mode</label>
+                <input type="radio" id="dark"
+                name="theme">
+    
+            </fieldset>
+        </form>
+    
+
+</header>
+  
+  <div class="label">
+    <h1>Our Tutors</h1>
+    <ul class="breadcrumb">
+      <li><a href="Home.html">Home</a></li>  
+      <li><a href="Tutors.html">tutors</a></li>
+     
+      </ul>
+  </div>
+
+
+  <main>
+    <div class="sort">
+      <label>
+        Sorting alphabetically:
+        <select id="sortSelect">
+          <option selected disabled hidden>Select an Option</option> 
+          <option>from A-Z</option>
+          <option>from Z-A</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="tutor-container">
+
+
+      <div class="tutor">
+
+        <img src="images/Screenshot1445-04-08at11.04.16AM.png" alt="Tutor 1">
+        <h2>Ayman Alrashed</h2>
+        <p>Teaching topics:</p>
+        <p class="Area">ML for kids,Robotics for kids</p>
+
+        <p>Teaching Area: </p>
+        <p class="Area">programming</p>
+      </div>
+
+      <div class="tutor">
+        <img src="images/FafFQvdXEAEViGJ.jpg" alt="Tutor 2">
+        <h2>Noura Rashed</h2>
+        <p>Teaching topics:</p>
+        <p class="Area"> Scratch, Python Basics</p>
+        <p>Teaching Area: </p>
+        <p class="Area">game engine ,programming</p>
+      </div>
+
+      <div class="tutor">
+        <img src="images/photo2.webp" alt="Tutor 3">
+        <h2>Esam Alwagait</h2>
+        <p>Teaching topics:</p>
+        <p class="Area">Unity Basics,Scratch</p>
+        <p>Teaching Area: </p>
+        <p class="Area">game engine ,programming</p>
+      </div>
+
+      <div class="tutor">
+        <img src="images/photo.jpeg" alt="Tutor 4">
+        <h2>Abdullah Alswaha</h2>
+        <p>Teaching topics: </p>
+        <p class="Area">Arduino 101Unity Basics</p>
+        <p>Teaching Area: </p>
+        <p class="Area">Tdata science</p>
+      </div>
+      <div class="tutor">
+        <img src="images/ginella_massa_2.jpg" alt="Tutor 5">
+        <h2>Gada Alnafisah </h2>
+        <p>Teaching topics:</p>
+        <p class="Area"> Python Basics,Scratch</p>
+        <p>Teaching Area: </p>
+        <p class="Area">software programming</p>
+      </div>
+
+    </div>
+
+
+    <script>
+      const sortSelect = document.getElementById('sortSelect');
+      const tutorContainer = document.querySelector('.tutor-container');
+      const tutors = tutorContainer.querySelectorAll('.tutor');
+
+      sortSelect.addEventListener('change', function () {
+        const sortValue = sortSelect.value;
+
+        if (sortValue === 'from A-Z') {
+          const sortedTutors = Array.from(tutors).sort((a, b) => {
+            const nameA = a.querySelector('h2').textContent;
+            const nameB = b.querySelector('h2').textContent;
+            return nameA.localeCompare(nameB);
+          });
+
+          tutorContainer.innerHTML = '';
+          sortedTutors.forEach(tutor => tutorContainer.appendChild(tutor));
+        } else if (sortValue === 'from Z-A') {
+          const sortedTutors = Array.from(tutors).sort((a, b) => {
+            const nameA = a.querySelector('h2').textContent;
+            const nameB = b.querySelector('h2').textContent;
+            return nameB.localeCompare(nameA);
+          });
+
+          tutorContainer.innerHTML = '';
+          sortedTutors.forEach(tutor => tutorContainer.appendChild(tutor));
+        }
+      });
+    </script>
+  </main>
+
+
+
+
+
+  <footer style="margin-bottom: 0 ; margin-top:10%">
+  
+    <a href="mailto:help@JuniorCoders.sa"><em>Contact Us <small>(click me)</small></em></a>
+    <p style="margin: 0.75vw; font-size: small;">(help@JuniorCoders.sa)</p>
+    <small class="rights">
+        ©️ Junior Coders 2023. All rights reserved.
+    </small>
+
+</footer>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+const navigation = document.querySelector(".navigation");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navigation.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navigation.classList.remove("active");
+
+}))
+
+//theme
+const colorThemes = document.querySelectorAll('[name="theme"]');
+
+const storeTheme = function (theme) {
+    localStorage.setItem("theme", theme);
+};
+
+const retrieveTheme = function () {
+    const activeTheme = localStorage.getItem("theme");
+    colorThemes.forEach((themeOption) => {
+        if (themeOption.id === activeTheme) {
+            themeOption.checked = true;
+        }
+    });
+};
+
+colorThemes.forEach((themeOption) => {
+    themeOption.addEventListener("click", () => {
+        storeTheme(themeOption.id);
+    });
+});
+
+document.onload = retrieveTheme();
+
+
+</script>
+</body>
+
+</html>
