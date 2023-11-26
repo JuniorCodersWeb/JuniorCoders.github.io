@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+<title>Schedule</title> 
+<meta charset="utf-8">
+<link rel = "stylesheet" href = "projectStyleSheet.css">
+<style>
+
+html { 
+font-family : Playfair Display , Merriweather ;
+    scroll-behavior: smooth;
+  }
+
+h1 { text-align : center ; } 
+caption{color: var(--clr-text);}
+
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content : center ; 
+}  
+ 
+
+.center { margin-left: auto ; 
+margin-right: auto ;  }
+
+table { border : 1px solid ;  } 
+
+.center:hover {    transform: scale(1.1);}
+table caption { font-family : Playfair Display , Merriweather ; 
+font-weight : bold ; 
+font-size : 2em ; }
+
+thead,tbody { color : white ; 
+background-color :  var(--clr-schedual) ; 
+border : 1px solid; 
+font-family :  Playfair Display , Merriweather  ; 
+text-align : center ; 
+font-weight : bold ;}
+
+.noWork { color : white ; 
+background-color : gray ; 
+border : 1px solid ; 
+font-family :  Playfair Display , Merriweather ; 
+text-align : center ; 
+font-weight : bold ;}
+
+</style>
+</head>
+
+<body> 
+
+
+  <header>
+    <img src="images/WebProjectLogo.png" alt="logo image" width=150 height=150>
+    <a href="home.html" accesskey="h"  class="logo">Junior Coders</a>
+    <nav class="navigation">
+        <a href="parentDashboard.html" accesskey="p">Parents Dashboard</a>
+                <a href="adminDashboard.html" accesskey="a">Administrator Dashboard</a>
+                <a href="coursePage.html" accesskey="c">Current Courses</a>
+                <a href="tutors.html" accesskey="t">Tutors</a>
+    </nav> 
+  </header>
+
+
+  <hr> 
+<ul class="breadcrumb">
+  <li><a href="home.html">Home</a></li> 
+  <li><a href="adminDashboard.html">Administrator Dashboard</a></li>  
+  <li><a href="tutors.html">Tutor name</a></li>
+  <li><a href="SchedulePage2.html">Schedule</a></li> 
+</ul> 
+
+    <!-- theme -->
+    <form class="color-picker"
+    action="" style="display: none;">
+        <fieldset>
+            <legend class="visually-hidden">Appearance</legend>
+
+            <label for="light"
+            class="visually-hidden">Light Mode</label>
+            <input type="radio" id="light"
+            name="theme" checked>
+
+            <label for="dark"
+            class="visually-hidden">Dark Mode</label>
+            <input type="radio" id="dark"
+            name="theme">
+
+        </fieldset>
+    </form>
+
+<br>
+<main>
+<table class="center">
+<caption>  T. Ayman Alrashed  </caption> 
+<thead>
+<tr> 
+<th> </th>
+<th> Time  </th> 
+<th> Sunday </th> 
+<th> Monday </th> 
+<th> Tuesday </th>
+<th> Wednesday </th> 
+<th> Thursday </th> 
+<th class="noWork"> Friday </th> 
+<th class="noWork"> Saturday </th> 
+</tr>
+</thead>
+<tbody> 
+<tr> 
+<td rowspan="5">T. Ayman Alrashed </td>
+<td>3:00 - <br> 4:00 </td>
+<td rowspan="3"> ML for kids </td> 
+<td> </td> 
+<td> </td> 
+<td> </td>
+<td> </td> 
+<td class="noWork"> </td> 
+<td class="noWork"> </td> 
+</tr> 
+<tr>
+<td>4:00 - <br> 5:00 </td> 
+<td> </td> 
+<td> </td> 
+<td></td> 
+<td> </td> 
+<td class="noWork"> </td> 
+<td class="noWork"> </td> 
+</tr>
+<tr>
+<td>5:00 - <br> 6:00 </td> 
+<td> </td> 
+<td> </td> 
+<td> </td> 
+<td> </td> 
+<td class="noWork"> </td> 
+<td class="noWork"> </td>
+</tr> 
+<tr> 
+<td>6:00 - <br> 7:00 </td>
+<td colspan="5"> Robotics for kids </td> 
+<td class="noWork"> </td> 
+<td class="noWork"> </td>
+</tr>
+<tr> 
+<td>7:00 - <br> 8:00</td>
+<td> </td> 
+<td> </td> 
+<td> </td> 
+<td> </td>
+<td> </td> 
+<td class="noWork"> </td> 
+<td class="noWork"> </td>
+</tr> 
+</tbody> 
+</table> 
+
+<br>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br>
+<br> 
+<br>
+ 
+
+ 
+</main> 
+
+
+<footer style="margin-bottom: 0 ; margin-top:10%">
+      <a href="mailto:help@JuniorCoders.sa"><em>Contact Us <small>(click me)</small></em></a>
+      <p style="margin: 0.75vw; font-size: x-small;">(help@JuniorCoders.sa)</p>
+      <small class="rights">
+          © Junior Coders 2023. All rights reserved.
+      </small>
+</footer>
+
+<script>
+  const colorThemes = document.querySelectorAll('[name="theme"]');
+
+  const storeTheme = function (theme) {
+    localStorage.setItem("theme", theme);
+  };
+
+  const retrieveTheme = function () {
+    const activeTheme = localStorage.getItem("theme");
+    colorThemes.forEach((themeOption) => {
+      if (themeOption.id === activeTheme) {
+        themeOption.checked = true;
+      }
+    });
+  };
+
+  colorThemes.forEach((themeOption) => {
+    themeOption.addEventListener("click", () => {
+      storeTheme(themeOption.id);
+    });
+  });
+
+  document.onload = retrieveTheme();
+</script>
+
+</body> 
+</html>

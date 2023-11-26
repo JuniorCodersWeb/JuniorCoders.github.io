@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Course Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link rel="stylesheet" href="projectStyleSheet.css">
+
+    <style>
+        section{
+            padding: 100px 200px;
+        }
+
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .courses .content{
+            margin-top: 30px;
+        }
+        .course-card{
+            background-color: var(--clr-card-bg);
+            box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            min-height: 14em;
+            width: 15em;
+            overflow: hidden;
+            transition: 0.7s;
+        }
+        .course-card:hover{
+            transform: scale(1.1);
+        }
+        .course-icon img{
+            width: 20%;
+        }
+        .course-info{
+            padding: 1em;
+        }
+        .course-category{
+            font-size: 0.8vw;
+            color: var(--clr-text);
+            padding: 0.7em;
+        }
+        .course-title{
+            display: flex;
+            justify-content:left;
+            font-weight: 800;
+        }
+        .more-details {
+            text-decoration: none;
+            color: var(--clr-text);
+            font-weight: 800;
+        }
+
+        .checked {
+            color: orange;
+            padding-top: 0%;
+        } 
+
+        
+        .container form{
+            text-align : center ; 
+            background-color: var(--clr-card-bg);
+            box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 15px;
+            min-height: 14em;
+            width:77em;
+            overflow: hidden;
+            transition: 0.7s;
+            float:center;
+        }
+
+        .course-card {
+            list-style-type: none;
+            text-decoration: none;
+            width: 28vw;
+            overflow: hidden;
+            border-radius: 1.65vw;    
+            color: var(--clr-text);
+            display: inline-block;
+            padding: 2.8vw 1.2vw 0.8vw;
+            margin: 1.17vw;
+            font-size: 1.17vw;
+}
+
+        .course-card .course-category {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .course-card:hover .course-category {
+            display: block;
+            max-height: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+   <header>
+  <img src="images/WebProjectLogo.png" alt="logo image" width=150 height=150>
+  <a href="home.html" accesskey="h"  class="logo">Junior Coders</a>
+  <nav class="navigation">
+    <a href="parentDashboard.html" accesskey="p">Parents Dashboard</a>
+                <a href="adminDashboard.html" accesskey="a">Administrator Dashboard</a>
+                <a href="coursePage.html" accesskey="c">Current Courses</a>
+                <a href="tutors.html" accesskey="t">Tutors</a>
+</nav> 
+</header>
+	
+<hr>
+
+
+
+<img class="mainpicture" src="images/kidProgramming.jpg" alt="kid learning picture"  width=1500 height=750>
+
+
+    <ul class="breadcrumb">
+        <li><a href="home.html">Home</a></li> 
+        <li><a href="CoursePage.html">Current Courses</a></li>  
+    </ul> 
+
+                    <!-- theme -->
+                    <form class="color-picker"
+                    action="" style="display: none;">
+                        <fieldset>
+                            <legend class="visually-hidden">Appearance</legend>
+                
+                            <label for="light"
+                            class="visually-hidden">Light Mode</label>
+                            <input type="radio" id="light"
+                            name="theme" checked>
+                
+                            <label for="dark"
+                            class="visually-hidden">Dark Mode</label>
+                            <input type="radio" id="dark"
+                            name="theme">
+                
+                        </fieldset>
+                    </form>
+    
+
+<section class="courses">
+        <div class="content">
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/python(1).png" alt="python icon">
+                </div> 
+                <div class="course-info">
+                    <strong class="course-title">
+                       Python Basics
+                    </strong>
+                    <p class="course-category">This Python for Kids tutorial introduces Python programming in a fun and engaging way.
+					 <br> <br> Schedule:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; Current tutors:  <br>
+					 Wed|3:00-7:00     &nbsp; &nbsp;      Gada Alnafisah,Noura Rashed   
+				
+					 <br> <br>Expected Objective:Introduction to Programming Concepts and understanding Syntax and Structure
+					 <br> <br>Filter prerequisites: Computer Basics,Basics of Math</p>
+                </div>     
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>                        
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/AI.png" alt="brain icon">
+                </div> 
+                <div class="course-info">
+                    <strong class="course-title">
+                      ML for kids
+                    </strong>
+                    <p class="course-category">Learn to build & code AI models using Scratch.
+					 <br> <br> Schedule:   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;    Current tutors: <br>
+					 Sun|3:00-6:00  &nbsp; &nbsp; &nbsp;       Ayman Alrashed      
+					 
+					   <br> <br>Expected Objective:Introduction to Algorithms  
+                       <br> <br>Prerequisites: Python Basics,Basics of Math </p>
+                </div>  
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>                        
+               
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/arduino.png" alt="arduino icon">
+                </div> 
+                <div class="course-info">
+                    <strong class="course-title">
+                      Arduino 101
+                    </strong>
+                    <p class="course-category">Learn electrical engineering basics with block-based and text-based arduino programming! 
+					 <br> <br> Schedule:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  	 Current tutors: <br>
+					 Tues-Wed|4:00-6:00 &nbsp;  &nbsp;       Abdullah Alswaha      
+					
+					 <br>  <br> Expected Objective:Programming Fundamentals and Problem-Solving Skills 
+                      <br> <br> Prerequisites: Basics of Math,Basics of Physics</p>
+                </div>  
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>                        
+               
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/robot.png" alt="robot icon">
+                </div> 
+                <div class="course-info">
+                    <strong class="course-title">
+                       Robotics for kids
+                    </strong>
+                    <p class="course-category">Dive deep into the world of robotics and explore how computer programming and robot design can solve problems big and small!
+					 <br> <br> Schedule:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  	Current tutors: <br>
+					 Sun-Thurs|6:00-7:00   &nbsp;   Ayman Alrashed      
+				
+					   <br> <br>Expected Objective: Teaching the basics of robotics, including components, sensors, and programming.
+                       <br> <br> Prerequisites: Basics of Math,Basics of Physics</p>
+                </div>    
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>                                     
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/scratch(1).png" alt="scratch icon">
+                </div> 
+                <div class="course-info">
+                    <strong class="course-title">
+                      Scratch
+                    </strong>
+                    <p class="course-category">Scratch is a beginner- and kid-friendly programming language that uses a block-based interface to create stories, animations, and games. 
+					 <br> <br> Schedule: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current tutors:<br>
+					Mon-Tues|4:00-6:00      &nbsp;       Gada Alnafisah,Noura Rashed,Esam Alwagait 
+			
+					  <br> <br> Expected Objective: Hands-On Learning and Educational Games
+                       <br> <br>Prerequisites:None </p>
+                </div> 
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>                                        
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/unity(1).png" alt="unity icon">
+                </div> 
+                <div class="course-info">
+                    <strong class="course-title">
+                       Unity Basics
+                    </strong>
+                    <p class="course-category">This course teaches kids to write game scripts in C# and create games on their own.
+					  <br> <br>  Schedule:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Current tutors:
+					 <br>Mon-Wed|6:00-7:00  &nbsp;  Abdullah Alswaha,Esam Alwagait 
+					 <br> <br>Expected Objective: Introduction to Game Development
+                    <br><br> Prerequisites:Computer Basics </p>
+                </div>   
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>                                      
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer>
+       
+            <a href="mailto:help@JuniorCoders.sa"><em>Contact Us <small>(click me)</small></em></a>
+            <p style="margin: 0.75vw; font-size: x-small;">(help@JuniorCoders.sa)</p>
+            <small class="rights">
+                © Junior Coders 2023. All rights reserved.
+            </small>
+       
+    </footer>
+
+    <!-- theme -->
+<script>
+    //theme
+    const colorThemes = document.querySelectorAll('[name="theme"]');
+
+const storeTheme = function (theme) {
+localStorage.setItem("theme", theme);
+};
+
+const retrieveTheme = function () {
+const activeTheme = localStorage.getItem("theme");
+colorThemes.forEach((themeOption) => {
+if (themeOption.id === activeTheme) {
+themeOption.checked = true;
+}
+});
+};
+
+colorThemes.forEach((themeOption) => {
+themeOption.addEventListener("click", () => {
+storeTheme(themeOption.id);
+});
+});
+document.onload = retrieveTheme();
+
+</script>
+
+</body>
+</html>
+
+
+

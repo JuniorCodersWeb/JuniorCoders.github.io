@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <title>New Kid Registeration</title>
+    <link rel="stylesheet" href="projectStyleSheet.css">
+    <style>
+
+@media print {
+
+body *{
+    visibility: hidden;
+}
+
+.infoContainer, .infoContainer * {
+    visibility: visible;
+}
+}
+
+
+
+        @media screen {
+            html {
+                font-family: Playfair Display, Merriweather;
+                scroll-behavior: smooth;
+            }
+
+
+            h1 {
+                text-align: center;
+                color: var(--clr-text);
+            }
+
+
+            .main {
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                align-content: center;
+            }
+
+
+            div.form1 {
+                line-height: 200%;
+                display: block;
+                text-align: center;
+                margin-left: 15%;
+                margin-right: 20%;
+                width: 25%;
+                height: 50%;
+            }
+
+            .submit {
+                width: 10em;
+                height: 3em;
+            }
+
+            .form1 {
+                line-height: 300%;
+                text-align: center;
+                background-color: var(--clr-card-bg);
+                box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+                border-radius: 10px;
+                padding: 25px;
+                margin: 15px;
+                min-height: 14em;
+                width: 20em;
+                overflow: hidden;
+                transition: 0.7s;
+                float: left;
+            }
+
+            .form-inline1 {
+                line-height: 300%;
+                text-align: center;
+                background-color: var(--clr-card-bg);
+                box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+                border-radius: 10px;
+                padding: 25px;
+                margin: 15px;
+                min-height: 14em;
+                width: 20em;
+                overflow: hidden;
+                transition: 0.7s;
+                float: left;
+            }
+
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            label, h4{ 
+                color: var(--clr-text);
+            }
+        }
+
+        @media print {
+
+
+            input {
+                line-height: 300%;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/WebProjectLogo.png" alt="logo image" width=150 height=150>
+        <a href="home.html" accesskey="h" class="logo">Junior Coders</a>
+        <nav class="navigation">
+            <a href="parentDashboard.html" class="nav-link" accesskey="p">Parents Dashboard</a>
+            <a href="adminDashboard.html" class="nav-link" accesskey="a">Administrator Dashboard</a>
+            <a href="coursePage.html" class="nav-link" accesskey="c">Current Courses</a>
+            <a href="tutors.html" class="nav-link" accesskey="t">Tutors</a>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+</header>
+      
+
+                <!-- theme -->
+                <form class="color-picker"
+                action="" style="display: none;">
+                    <fieldset>
+                        <legend class="visually-hidden">Appearance</legend>
+            
+                        <label for="light"
+                        class="visually-hidden">Light Mode</label>
+                        <input type="radio" id="light"
+                        name="theme" checked>
+            
+                        <label for="dark"
+                        class="visually-hidden">Dark Mode</label>
+                        <input type="radio" id="dark"
+                        name="theme">
+            
+                    </fieldset>
+                </form>
+
+
+
+    <hr>
+
+    <h1> Register a new kid </h1>
+    <ul class="breadcrumb">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="parentDashboard.html">Parent Dashboard</a></li>
+        <li><a href="newKidEnrollmentPage2.html">Register a new kid</a></li>
+    </ul>
+    <hr>
+
+    <div id = "studentForm" class="kid-info">
+
+        <main>
+
+        <div class="form-container">      
+        
+            <div class="form1">
+
+
+                <form name="photo" action="/action.php" method="post">
+                    <label>Select a photo to be used as your childs' profile
+                    <input type="file" id="photo" name="photo">
+                    </label>
+                </form>
+            </div>
+            <div class="form-inline1">
+                <form name="f-name" action="/action.php" method="post">
+                    <h4> enter first and last name </h4>
+                    <label>First name:
+                        <input type="text" placeholder="First name" name="fname" id="fname">
+                    </label>
+                </form>
+
+                <form name="l-name" action="/action.php" method="post">
+                    <label>Last name:
+                        <input type="text" placeholder="Last name" name="lname" id="lname">
+                    </label>
+                </form>
+
+
+                <form name="birth" action="/action.php" method="post">
+                    <h4> enter DOB and gender </h4>
+                    <label>Date of birth:
+                        <input type="date" name="birthday" id="date" value="">
+                        <br>
+                    </label>    
+                </form>
+                
+                <form name="gen" action="/action.php" method="post">
+                    <label>Gender:
+                        <ul id="gender">
+                            <li><input type="radio" name="gender" value="Female">Female</li>
+                            <li><input type="radio" name="gender" value="Male">Male</li>
+                        </ul>
+                </label>
+                </form>
+
+                <form name="e-mail" action="/action.php" method="post">
+                    <h4> enter kids' email </h4>
+                    <label>Email:
+                        <input type="email" placeholder="Email" name="email" id="email">
+                    </label>    
+                </form>
+
+
+                <form onsubmit="return validateForm()">
+                    <input class="submit" type="submit" value="submit">
+                </form>
+                
+            </div>
+        </main>
+    </div>
+
+
+    <footer style="margin-bottom: 0 ; margin-top:10%">
+  
+        <a href="mailto:help@JuniorCoders.sa"><em>Contact Us <small>(click me)</small></em></a>
+        <p style="margin: 0.75vw; font-size: small;">(help@JuniorCoders.sa)</p>
+        <small class="rights">
+            © Junior Coders 2023. All rights reserved.
+        </small>
+</footer>
+
+<!-- print -->
+<script>
+
+function handleFormSubmit(event) {
+    
+                // Submit button click event
+                event.preventDefault(); // Prevent the default form submission behavior
+
+                // Check if a child is selected
+                var selectedChild = document.getElementById("fname").value;
+
+
+
+                // Display information on the page
+                var infoContainer = document.createElement("div");
+                infoContainer.className = "enrollment-info";
+                infoContainer.innerHTML = "<h3>Enrollment Information</h3>" +
+                    "<p>First name: " + localStorage.getItem('fname').value + "</p>";
+
+
+                // Clear previous information and display new information
+                var previousInfo = document.querySelector(".enrollment-info");
+                if (previousInfo) {
+                    previousInfo.remove();
+                }
+                document.querySelector("main").appendChild(infoContainer);
+
+                // Clear the form
+                document.querySelector("form").reset();
+            }
+
+
+            function myFunction() {
+  var x = localStorage.getItem("FirstName");
+  document.getElementById("infoContainer").innerHTML = x;
+}
+
+
+</script>
+
+
+
+
+<!-- validation -->
+<script>
+
+            // input validation
+            function validateForm() {
+
+
+            let photo = document.forms["photo"]["photo"].value;
+            if (photo == "") {
+                alert("Must choose a photo");
+                return false;
+            }
+            localStorage.setItem("ChildPhoto", photo);
+
+
+            let a = document.forms["f-name"]["fname"].value;
+            let aFirstLetter = a.charAt(0);
+            if (a == "") {
+                alert("First name must be filled out");
+                return false;
+            }
+
+            if (aFirstLetter == ("0") || aFirstLetter == ("1") || aFirstLetter == ("2") || aFirstLetter == ("3") || aFirstLetter == ("4") || aFirstLetter == ("5") || aFirstLetter == ("6") || aFirstLetter == ("7") || aFirstLetter == ("8") || aFirstLetter == ("9")) {
+                alert("First name must contain only letters");
+                return false;
+            }
+            localStorage.setItem("FirstName", a);
+            /*-----------------------------------------------------------------------------------------------*/
+
+            let b = document.forms["l-name"]["lname"].value;
+            let bFirstLetter = b.charAt(0);
+            if (b == "") {
+                alert("last name must be filled out");
+                return false;
+            }
+
+            if (bFirstLetter == ("0") || bFirstLetter == ("1") || bFirstLetter == ("2") || bFirstLetter == ("3") || bFirstLetter == ("4") || bFirstLetter == ("5") || bFirstLetter == ("6") || bFirstLetter == ("7") || bFirstLetter == ("8") || bFirstLetter == ("9")) {
+                alert("Last name must contain only letters");
+                return false;
+            }
+
+            localStorage.setItem("LastName", b);
+
+            /*-----------------------------------------------------------------------------------------------*/
+
+            let c = document.forms["birth"]["birthday"].value;
+            if (c == "") {
+                alert("Date of birth must be filled out");
+                return false;
+            }
+
+            var dobDate = new Date(c);
+
+            if (dobDate.getFullYear() > 2017 || dobDate.getFullYear() < 2008) {
+                alert("child Birth year should be between 2008 and 2017")
+                return false;
+            }
+            localStorage.setItem("DateOfBirth", c);
+
+
+            /*-----------------------------------------------------------------------------------------------*/
+
+            let d = document.forms["gen"]["gender"].value;
+            if (d == "") {
+                alert("Gender must be filled out");
+                return false;
+            }
+            localStorage.setItem("Gender", d);
+
+            /*-----------------------------------------------------------------------------------------------*/
+
+            let emailInput = document.forms["e-mail"]["email"];
+            let email = emailInput.value;
+
+            if (email == "") {
+            alert("Email must be filled out");
+            return false;
+            }
+
+            if (emailInput.validity.typeMismatch) {
+                alert("Invalid email address");
+                return false;
+            }
+            
+            localStorage.setItem("Email", email);
+
+
+        // Store child's name in local storage
+        var childInfo = { name: a };
+        localStorage.setItem('childName', a);
+
+        // Check if there are already saved children in local storage
+        let parentRegisteredKids = JSON.parse(localStorage.getItem("parentRegisteredKids")) || [];
+
+        // Add the new child to the list of registered kids
+        parentRegisteredKids.push(childInfo);
+
+        // Update local storage for registered kids
+        localStorage.setItem("parentRegisteredKids", JSON.stringify(parentRegisteredKids));
+
+        window.print();
+        return true; // Proceed with form submission
+
+        }
+
+
+        
+</script>
+
+
+<!-- responsivness and theme -->
+    <script>
+
+        //header responsivness
+        const hamburger = document.querySelector(".hamburger");
+        const navigation = document.querySelector(".navigation");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navigation.classList.remove("active");
+
+        }))
+
+
+     //theme
+        const colorThemes = document.querySelectorAll('[name="theme"]');
+
+        const storeTheme = function (theme) {
+        localStorage.setItem("theme", theme);
+        };
+
+        const retrieveTheme = function () {
+        const activeTheme = localStorage.getItem("theme");
+        colorThemes.forEach((themeOption) => {
+            if (themeOption.id === activeTheme) {
+            themeOption.checked = true;
+            }
+        });
+        };
+
+        colorThemes.forEach((themeOption) => {
+        themeOption.addEventListener("click", () => {
+            storeTheme(themeOption.id);
+        });
+        });
+        document.onload = retrieveTheme();
+
+
+    </script>
+
+</body>
+
+</html>

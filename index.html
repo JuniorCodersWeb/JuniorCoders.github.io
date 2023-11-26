@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="projectStyleSheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul {
+            line-height: 1.75vw;
+        }
+
+        section {
+            padding: 100px 200px;
+        }
+
+        .main {
+            background: var(--clr-body-bg);
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url(/images/UntitledDesign.png) no-repeat;
+            background-size: cover;
+            background-position: left;
+        }
+
+        .main h2 {
+            color: var(--clr-heading);
+            font-size: 1.6vw;
+        }
+
+        .main-btn {
+            color: var(--clr-headingText);
+            background: var(--clr-heading);
+            text-decoration: none;
+            font-size: 1.1vw;
+            font-weight: 600;
+            display: inline-block;
+            padding: 0.9375em 1em;
+            letter-spacing: 1px;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+
+        .main-btn:hover {
+            background-color: #3c3158;
+            transform: scale(1.05, 1.05);
+        }
+
+
+
+        .title {
+            color: var(--clr-text);
+            text-align: center;
+            font-size: 1.5vw;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .courses .content {
+            margin-top: 30px;
+        }
+
+        .course-card {
+            background: var(--clr-card-bg);
+            box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            min-height: 14em;
+            width: 15em;
+            overflow: hidden;
+            transition: 0.7s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.1);
+        }
+
+        .course-icon img {
+            width: 20%;
+        }
+
+        .course-info {
+            padding: 1em;
+        }
+
+        .course-category {
+            font-size: 1.1vw;
+            color: var(--clr-text);
+            padding: 0.7em;
+        }
+
+        .course-title {
+            display: flex;
+            justify-content: left;
+            font-weight: 800;
+        }
+
+        .more-details {
+            text-decoration: none;
+            color: var(--clr-text);
+            font-weight: 800;
+        }
+
+        .checked {
+            color: orange;
+            padding-top: 0%;
+        }
+
+        .review-card {
+            background-color: var(--clr-card-bg);
+            box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            min-height: 14em;
+            width: 15em;
+            overflow: hidden;
+            transition: 0.7s;
+        }
+
+        .review-card:hover {
+            transform: scale(1.02);
+        }
+
+        .review-icon img {
+            width: 20%;
+        }
+
+        .review-info {
+            padding: 1em;
+        }
+
+        .review-info p{
+            color: var(--clr-text);
+        }
+
+        .review-category {
+            font-size: 0.8vw;
+            padding: 0.7em;
+        }
+
+        .review-title {
+            display: flex;
+            justify-content: left;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        @media (max-width: 939px){
+
+            .review-card , .course-card {
+                padding: 25px;
+                margin: 10px;
+                min-height: 14em;
+                min-width: 15em;
+                overflow: auto;
+            }
+
+            .reviewer-name, .more-details{
+                font-size: x-large;
+            }
+
+            .course-category, .review-feedback {
+                font-size: medium;
+            }
+
+            .title {
+                font-size: 5vw;
+            }
+
+            .main-btn{
+                font-size: 3.0vw;
+                font-weight: 600;
+                display: inline-block;
+                padding: 0.9375em 1em;
+                letter-spacing: 1px;
+            }
+            .main h2 , a{
+                font-size: xx-large;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+
+    <header>
+        <img src="images/WebProjectLogo.png" alt="logo image" width=150 height=150>
+        <a href="home.html" accesskey="h" class="logo">Junior Coders</a>
+        <nav class="navigation">
+            <a href="parentDashboard.html" class="nav-link" accesskey="p">Parents Dashboard</a>
+            <a href="adminDashboard.html" class="nav-link" accesskey="a">Administrator Dashboard</a>
+            <a href="coursePage.html" class="nav-link" accesskey="c">Current Courses</a>
+            <a href="tutors.html" class="nav-link" accesskey="t">Tutors</a>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </header>
+
+
+    <section class="main">
+        <div>
+            <h2>Empowering the Next Generation of Innovators</h2><br>
+            <a href="#recommended" class="main-btn">Check Our Courses</a>
+    </section>
+
+
+
+    <hr>
+    <ul class="breadcrumb">
+        <li><a href="home.html">Home</a></li>
+    </ul>
+
+    <!-- theme -->
+    <form class="color-picker"
+    action="">
+        <fieldset>
+            <legend class="visually-hidden">Appearance</legend>
+
+            <label for="light"
+            class="visually-hidden">Light Mode</label>
+            <input type="radio" id="light"
+            name="theme" checked>
+
+            <label for="dark"
+            class="visually-hidden">Dark Mode</label>
+            <input type="radio" id="dark"
+            name="theme">
+
+        </fieldset>
+    </form>
+     
+     
+     
+
+
+    <section class="courses" id="recommended">
+        <h2 class="title">Recommended Courses</h2>
+        <div class="content">
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/python(1).png" alt="python icon">
+                </div>
+                <div class="course-info">
+                    <strong class="course-title">
+                        <a href="coursePage.html" class="more-details" target="blank">Python Basics</a>
+                    </strong>
+                    <p class="course-category">This Python for Kids tutorial introduces Python programming in a fun and
+                        engaging way.</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/AI.png" alt="brain icon">
+                </div>
+                <div class="course-info">
+                    <strong class="course-title">
+                        <a href="coursePage.html" class="more-details" target="blank">ML for kids</a>
+                    </strong>
+                    <p class="course-category">Learn to build & code AI models using Scratch.</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/arduino.png" alt="arduino icon">
+                </div>
+                <div class="course-info">
+                    <strong class="course-title">
+                        <a href="coursePage.html" class="more-details" target="blank">Arduino 101</a>
+                    </strong>
+                    <p class="course-category">Learn electrical engineering basics with block-based and text-based
+                        arduino programming! </p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/robot.png" alt="robot icon">
+                </div>
+                <div class="course-info">
+                    <strong class="course-title">
+                        <a href="coursePage.html" class="more-details" target="blank">Robotics for kids</a>
+                    </strong>
+                    <p class="course-category">Dive deep into the world of robotics and explore how computer programming
+                        and robot design can solve problems big and small!</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/scratch(1).png" alt="scratch icon">
+                </div>
+                <div class="course-info">
+                    <strong class="course-title">
+                        <a href="coursePage.html" class="more-details" target="blank">Scratch</a>
+                    </strong>
+                    <p class="course-category">Scratch is a beginner- and kid-friendly programming language that uses a
+                        block-based interface to create stories, animations, and games. </p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <img src="images/unity(1).png" alt="unity icon">
+                </div>
+                <div class="course-info">
+                    <strong class="course-title">
+                        <a href="coursePage.html" class="more-details" target="blank">Unity Basics</a>
+                    </strong>
+                    <p class="course-category">This course teaches kids to write game scripts in C# and create games on
+                        their own.</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="reviews">
+        <h2 class="title">Why everyone loves Junior Coders?</h2>
+        <div class="content">
+
+            <div class="review-card">
+                <div class="review-img">
+                    <img src="images/boy.png" alt="boy image" width=150 height=150>
+                </div>
+                <div class="review-info">
+                    <!-- <strong class="reviewer-name">
+                        <p>Python Basics</p>
+                    </strong> -->
+                    <p class="reviewer-name">
+                        <strong>Python Basics</strong>
+                    </p>
+                    <p class="review-feedback">Python Basics is a great start for kids in coding. My child found it
+                        engaging and learned the fundamentals quickly.</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-img">
+                    <img src="images/girl1.png" alt="girl Image" width=150 height=150>
+                </div>
+                <div class="review-info">
+                    <!-- <strong class="reviewer-name">
+                        <p>Arduino 101</p>
+                    </strong> -->
+                    <p class="reviewer-name">
+                        <strong>Arduino 101</strong>
+                    </p>
+
+                    <p class="review-feedback">My child loved building circuits and coding with Arduino. It's an
+                        exciting and educational course.</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-img">
+                    <img src="images/girl2.png" alt="girl image" width=150 height=150>
+                </div>
+                <div class="review-info">
+                    <!-- <strong class="reviewer-name">
+                        <p>Scratch</p>
+                    </strong> -->
+                    <p class="reviewer-name">
+                        <strong>Scratch</strong>
+                    </p>
+
+                    <p class="review-feedback">This course makes it easy to grasp the basics of programming, and my
+                        child was thrilled to showcase their projects to family and friends.</p>
+                </div>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <footer style="margin-bottom: 0 ; margin-top:10%">
+
+        <a href="mailto:help@JuniorCoders.sa"><em>Contact Us <small>(click me)</small></em></a>
+        <p style="margin: 0.75vw; font-size: small;">(help@JuniorCoders.sa)</p>
+        <small class="rights">
+            © Junior Coders 2023. All rights reserved.
+        </small>
+
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navigation = document.querySelector(".navigation");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navigation.classList.remove("active");
+
+        }))
+
+// theme
+
+
+        const colorThemes = document.querySelectorAll('[name="theme"]');
+
+            const storeTheme = function (theme) {
+                localStorage.setItem("theme", theme);
+            };
+
+            const retrieveTheme = function () {
+                const activeTheme = localStorage.getItem("theme");
+                colorThemes.forEach((themeOption) => {
+                    if (themeOption.id === activeTheme) {
+                        themeOption.checked = true;
+                    }
+                });
+            };
+
+            colorThemes.forEach((themeOption) => {
+                themeOption.addEventListener("click", () => {
+                    storeTheme(themeOption.id);
+                });
+            });
+
+            document.onload = retrieveTheme();
+
+</script>
+
+
+</body>
+
+</html>
